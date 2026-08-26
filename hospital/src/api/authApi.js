@@ -1,0 +1,8 @@
+// authApi.js — placeholder for real auth endpoints
+import axiosClient from './axiosClient';
+
+export const authApi = {
+  // login:  (credentials) => axiosClient.post('/auth/login', credentials),
+  // logout: ()            => axiosClient.post('/auth/logout'),
+  // me:     ()            => axiosClient.get('/auth/me'),
+};

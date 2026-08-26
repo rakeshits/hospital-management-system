@@ -1,0 +1,47 @@
+/*
+ * view/styles/global.css
+ *
+ * This file is imported via src/index.css which contains the Tailwind directive.
+ * Add any view-layer-specific overrides here that don't belong in index.css.
+ */
+
+/* ── Public page section spacing ── */
+.section-gap { padding-top: 5rem; padding-bottom: 5rem; }
+
+/* ── Smooth page transitions ── */
+.page-enter { animation: fadeIn 0.4s ease both; }
+
+/* ── Public hero text gradient ── */
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Card hover lift (extra specificity for public pages) ── */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(14,165,233,0.15);
+}
+
+/* ── Timeline dot pulse ── */
+.timeline-dot {
+  position: relative;
+}
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+  opacity: 0;
+  animation: ping 2s ease-out infinite;
+}
+@keyframes ping {
+  0%   { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.8); }
+}
