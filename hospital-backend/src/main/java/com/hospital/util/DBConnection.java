@@ -18,9 +18,9 @@ import java.sql.SQLException;
  */
 public class DBConnection {
 
-    private static final String URL      = "jdbc:mysql://localhost:3306/hospital_management_system";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "root1234@";
+    private static final String URL      = requireEnvironmentVariable("DB_URL");
+    private static final String USERNAME = requireEnvironmentVariable("DB_USER");
+    private static final String PASSWORD = requireEnvironmentVariable("DB_PASSWORD");
 
     // Register driver once when the class is loaded
     static {
@@ -33,6 +33,14 @@ public class DBConnection {
     }
 
     private DBConnection() { /* utility class — no instantiation */ }
+
+    private static String requireEnvironmentVariable(String name) {
+        String value = System.getenv(name);
+        if (value == null || value.isBlank()) {
+            throw new IllegalStateException(name + " environment variable is not set");
+        }
+        return value;
+    }
 
     /**
      * Opens and returns a new JDBC Connection.

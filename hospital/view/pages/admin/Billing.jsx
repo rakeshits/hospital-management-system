@@ -34,7 +34,7 @@ export default function Billing() {
   const overdue      = bills.filter(b => b.status === 'Overdue').length;
 
   const COLS = [
-    { key:'invoiceNo', label:'Invoice',  render:(v) => <span className="font-mono text-sky-600 font-semibold text-sm">{v}</span> },
+    { key:'invoiceNo', label:'Invoice',  render:(v) => <span className="font-mono text-[--color-forest-ink] font-semibold text-sm">{v}</span> },
     { key:'patient',   label:'Patient'  },
     { key:'doctor',    label:'Doctor'   },
     { key:'date',      label:'Date',    render:(v) => new Date(v).toLocaleDateString('en-IN') },
@@ -61,7 +61,7 @@ export default function Billing() {
         {['All','Paid','Pending','Overdue'].map(s => (
           <button key={s} onClick={() => setFilter(s)}
             className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-all
-              ${filter===s ? 'bg-sky-500 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+              ${filter===s ? 'bg-[--color-forest-ink] text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
             {s}
           </button>
         ))}

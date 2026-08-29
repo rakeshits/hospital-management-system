@@ -49,7 +49,7 @@ export default function Signup() {
         <div className="bg-slate-50 rounded-xl p-5 w-full text-left space-y-2 text-sm">
           <p><span className="font-medium text-slate-600">Name:</span> {form.firstName} {form.lastName}</p>
           <p><span className="font-medium text-slate-600">Email:</span> {form.email || 'patient@example.com'}</p>
-          <p><span className="font-medium text-slate-600">Patient ID:</span> <span className="font-mono text-sky-600">PAT-{Math.floor(Math.random() * 90000) + 10000}</span></p>
+          <p><span className="font-medium text-slate-600">Patient ID:</span> <span className="font-mono text-[--color-forest-ink]">PAT-{Math.floor(Math.random() * 90000) + 10000}</span></p>
         </div>
         <button className="btn btn-primary w-full justify-center py-3" onClick={() => navigate('/patient/dashboard')}>
           Go to My Dashboard
@@ -103,7 +103,7 @@ export default function Signup() {
         <Input id="uname" label="Username" icon={User} placeholder="johndoe123" value={form.username} onChange={e => set('username', e.target.value)} />
         <Input id="pass"  label="Password" icon={Lock} type="password" placeholder="Min. 8 characters" value={form.password} onChange={e => set('password', e.target.value)} />
         <Input id="confirm" label="Confirm Password" icon={Lock} type="password" placeholder="Re-enter password" value={form.confirm} onChange={e => set('confirm', e.target.value)} />
-        <div className="bg-blue-50 rounded-lg p-4 text-xs text-blue-700 border border-blue-100">
+        <div className="bg-[--color-keylime-wash] rounded-lg p-4 text-xs text-[--color-forest-ink] border border-[--color-border-mist]">
           <p className="font-semibold mb-1">Password Requirements:</p>
           <ul className="list-disc list-inside space-y-0.5">
             <li>At least 8 characters</li>
@@ -117,12 +117,12 @@ export default function Signup() {
 
   return (
     <PublicLayout>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 via-white to-blue-50 px-4 py-32">
+      <div className="min-h-screen flex items-center justify-center bg-[--color-keylime-wash] px-4 py-32">
         <div className="w-full max-w-2xl animate-fade-in">
           {/* Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="w-10 h-10 bg-sky-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-[--color-forest-ink] rounded-xl flex items-center justify-center">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold text-slate-800">MediCare HMS</span>
@@ -137,13 +137,13 @@ export default function Signup() {
               <React.Fragment key={s}>
                 <div className="flex flex-col items-center gap-1">
                   <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-300
-                    ${i < step ? 'bg-sky-500 border-sky-500 text-white' : i === step ? 'bg-white border-sky-500 text-sky-600' : 'bg-white border-slate-200 text-slate-400'}`}>
+                    ${i < step ? 'bg-[--color-forest-ink] border-[--color-forest-ink] text-white' : i === step ? 'bg-[--color-cream-paper] border-[--color-forest-ink] text-[--color-forest-ink]' : 'bg-[--color-cream-paper] border-slate-200 text-slate-400'}`}>
                     {i < step ? <CheckCircle2 className="w-5 h-5" /> : i + 1}
                   </div>
-                  <span className={`text-xs font-medium hidden sm:block transition-colors ${i === step ? 'text-sky-600' : i < step ? 'text-sky-400' : 'text-slate-400'}`}>{s}</span>
+                  <span className={`text-xs font-medium hidden sm:block transition-colors ${i === step ? 'text-[--color-forest-ink]' : i < step ? 'text-[--color-sage-mist]' : 'text-slate-400'}`}>{s}</span>
                 </div>
                 {i < STEPS.length - 1 && (
-                  <div className={`flex-1 h-0.5 mx-2 transition-colors duration-300 ${i < step ? 'bg-sky-400' : 'bg-slate-200'}`} />
+                  <div className={`flex-1 h-0.5 mx-2 transition-colors duration-300 ${i < step ? 'bg-[--color-sage-mist]' : 'bg-slate-200'}`} />
                 )}
               </React.Fragment>
             ))}
@@ -177,7 +177,7 @@ export default function Signup() {
 
           <p className="text-center text-sm text-slate-500 mt-4">
             Already have an account?{' '}
-            <Link to="/login" className="text-sky-500 hover:text-sky-700 font-semibold transition-colors">Sign in</Link>
+            <Link to="/login" className="text-[--color-forest-ink] hover:text-[--color-forest-shadow] font-semibold transition-colors">Sign in</Link>
           </p>
         </div>
       </div>

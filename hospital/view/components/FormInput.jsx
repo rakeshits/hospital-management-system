@@ -7,7 +7,7 @@ export default function FormInput({ label, id, type = 'text', icon: Icon, error,
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       {label && (
-        <label htmlFor={id} className="text-sm font-medium text-slate-700">
+        <label htmlFor={id} className="text-xs font-semibold uppercase tracking-wider text-forest-ink">
           {label}
         </label>
       )}

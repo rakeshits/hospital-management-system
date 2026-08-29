@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 const STATS = [
-  { label: 'Total Patients',       value: '3,842',  icon: Users,        color: 'text-sky-500',     bg: 'bg-sky-50',     trend: '↑ 12% this month' },
+  { label: 'Total Patients',       value: '3,842',  icon: Users,        color: 'text-[--color-forest-ink]', bg: 'bg-[--color-keylime-wash]', trend: '↑ 12% this month' },
   { label: 'Active Doctors',       value: '48',     icon: Stethoscope,  color: 'text-emerald-500', bg: 'bg-emerald-50', trend: '2 new this week'  },
   { label: "Today's Appointments", value: '127',    icon: CalendarDays, color: 'text-violet-500',  bg: 'bg-violet-50',  trend: '18 pending'       },
   { label: 'Monthly Revenue',      value: '₹8.4L',  icon: DollarSign,   color: 'text-amber-500',   bg: 'bg-amber-50',   trend: '↑ 8% vs last month'},
@@ -26,8 +26,8 @@ const DEPT_LOAD = [
   { dept: 'Cardiology',  patients: 42, capacity: 50, color: 'bg-red-400'    },
   { dept: 'Neurology',   patients: 28, capacity: 40, color: 'bg-purple-400' },
   { dept: 'Orthopedics', patients: 35, capacity: 45, color: 'bg-amber-400'  },
-  { dept: 'Pediatrics',  patients: 19, capacity: 30, color: 'bg-sky-400'    },
-  { dept: 'Oncology',    patients: 24, capacity: 35, color: 'bg-indigo-400' },
+  { dept: 'Pediatrics',  patients: 19, capacity: 30, color: 'bg-[--color-sage-mist]' },
+  { dept: 'Oncology',    patients: 24, capacity: 35, color: 'bg-[--color-sage-mist]' },
 ];
 
 const TODAY_APPTS = [
@@ -45,8 +45,8 @@ const STATUS_BADGE = {
 };
 
 const ACTIVITY_ICON = {
-  new:     { cls: 'bg-sky-100 text-sky-600',     icon: CalendarDays  },
-  info:    { cls: 'bg-blue-100 text-blue-600',   icon: Activity      },
+  new:     { cls: 'bg-[--color-keylime-wash] text-[--color-forest-ink]', icon: CalendarDays },
+  info:    { cls: 'bg-[--color-mint-veil] text-[--color-forest-ink]', icon: Activity },
   success: { cls: 'bg-emerald-100 text-emerald-600', icon: CheckCircle2 },
   warning: { cls: 'bg-amber-100 text-amber-600', icon: AlertCircle   },
   danger:  { cls: 'bg-red-100 text-red-600',     icon: AlertCircle   },
@@ -69,7 +69,7 @@ export default function AdminDashboard() {
         <div className="xl:col-span-2 card p-0 overflow-hidden">
           <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
             <h2 className="font-bold text-slate-800 flex items-center gap-2">
-              <CalendarDays className="w-4.5 h-4.5 text-sky-500" /> Today's Appointments
+              <CalendarDays className="w-4.5 h-4.5 text-[--color-forest-ink]" /> Today's Appointments
             </h2>
             <span className="badge badge-blue">{TODAY_APPTS.length} total</span>
           </div>

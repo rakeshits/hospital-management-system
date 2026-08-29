@@ -14,7 +14,7 @@ const TODAY_APPTS = [
 ];
 
 const RECENT_PATIENTS = [
-  { id:1, name:'Meena Pillai',   last:'2025-06-08', diagnosis:'Atrial Fibrillation',  init:'MP', color:'bg-sky-100 text-sky-700'    },
+  { id:1, name:'Meena Pillai',   last:'2025-06-08', diagnosis:'Atrial Fibrillation',  init:'MP', color:'bg-[--color-keylime-wash] text-[--color-forest-ink]' },
   { id:2, name:'Vikram Desai',   last:'2025-06-07', diagnosis:'Hypertension Stage 2', init:'VD', color:'bg-emerald-100 text-emerald-700'},
   { id:3, name:'Lakshmi Iyer',   last:'2025-06-06', diagnosis:'Coronary Artery Disease',init:'LI',color:'bg-violet-100 text-violet-700'},
 ];
@@ -33,7 +33,7 @@ export default function DoctorDashboard() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-7">
-        <StatCard label="Today's Appointments" value="5"  icon={CalendarDays} color="text-sky-500"     bg="bg-sky-50"     />
+        <StatCard label="Today's Appointments" value="5"  icon={CalendarDays} color="text-[--color-forest-ink]" bg="bg-[--color-keylime-wash]" />
         <StatCard label="Patients Seen"         value="3"  icon={CheckCircle2} color="text-emerald-500" bg="bg-emerald-50" trend="Today" />
         <StatCard label="Pending"               value="2"  icon={Clock}        color="text-amber-500"   bg="bg-amber-50"   />
         <StatCard label="Total Patients"        value="84" icon={Users}        color="text-violet-500"  bg="bg-violet-50"  />
@@ -44,9 +44,9 @@ export default function DoctorDashboard() {
         <div className="xl:col-span-2 card p-0 overflow-hidden">
           <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
             <h2 className="font-bold text-slate-800 flex items-center gap-2">
-              <CalendarDays className="w-4.5 h-4.5 text-sky-500" /> Today's Schedule
+              <CalendarDays className="w-4.5 h-4.5 text-[--color-forest-ink]" /> Today's Schedule
             </h2>
-            <Link to="/doctor/appointments" className="text-sky-500 text-xs font-semibold hover:text-sky-700 flex items-center gap-1">
+            <Link to="/doctor/appointments" className="text-[--color-forest-ink] text-xs font-semibold hover:text-[--color-forest-shadow] flex items-center gap-1">
               View all <ChevronRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -54,7 +54,7 @@ export default function DoctorDashboard() {
             {TODAY_APPTS.map(a => (
               <div key={a.id} className="flex items-center gap-4 px-6 py-4 hover:bg-slate-50 transition-colors">
                 <div className="text-center shrink-0 w-16">
-                  <p className="text-xs font-bold text-sky-600">{a.time.split(' ')[0]}</p>
+                  <p className="text-xs font-bold text-[--color-forest-ink]">{a.time.split(' ')[0]}</p>
                   <p className="text-xs text-slate-400">{a.time.split(' ')[1]}</p>
                 </div>
                 <div className="w-px h-10 bg-slate-200 shrink-0" />
@@ -77,7 +77,7 @@ export default function DoctorDashboard() {
             <h2 className="font-bold text-slate-800 flex items-center gap-2">
               <Users className="w-4.5 h-4.5 text-emerald-500" /> Recent Patients
             </h2>
-            <Link to="/doctor/patients" className="text-sky-500 text-xs font-semibold hover:text-sky-700">View all</Link>
+            <Link to="/doctor/patients" className="text-[--color-forest-ink] text-xs font-semibold hover:text-[--color-forest-shadow]">View all</Link>
           </div>
           <div className="flex flex-col gap-3">
             {RECENT_PATIENTS.map(p => (
@@ -91,7 +91,7 @@ export default function DoctorDashboard() {
                   <p className="text-xs text-slate-400 truncate">{p.diagnosis}</p>
                   <p className="text-xs text-slate-300">Last: {new Date(p.last).toLocaleDateString('en-IN')}</p>
                 </div>
-                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-sky-500 transition-colors" />
+                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-[--color-forest-ink] transition-colors" />
               </Link>
             ))}
           </div>

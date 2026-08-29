@@ -19,13 +19,13 @@ const DEPARTMENTS = [
   { name: 'Cardiology',   icon: Heart,       desc: 'Advanced heart care & cardiac surgery',          color: 'bg-red-50 text-red-500 border-red-100'    },
   { name: 'Neurology',    icon: Brain,       desc: 'Comprehensive brain & nervous system treatment',  color: 'bg-purple-50 text-purple-500 border-purple-100'},
   { name: 'Orthopedics',  icon: Bone,        desc: 'Bone, joint & musculoskeletal specialists',       color: 'bg-amber-50 text-amber-500 border-amber-100'  },
-  { name: 'Pediatrics',   icon: Baby,        desc: 'Dedicated child healthcare & development',        color: 'bg-sky-50 text-sky-500 border-sky-100'        },
+  { name: 'Pediatrics',   icon: Baby,        desc: 'Dedicated child healthcare & development',        color: 'bg-[--color-keylime-wash] text-[--color-forest-ink] border-[--color-border-mist]' },
   { name: 'Diagnostics',  icon: Microscope,  desc: 'State-of-the-art lab & imaging services',        color: 'bg-teal-50 text-teal-500 border-teal-100'    },
   { name: 'Emergency',    icon: Activity,    desc: '24×7 trauma & emergency care unit',               color: 'bg-rose-50 text-rose-500 border-rose-100'    },
 ];
 
 const DOCTORS = [
-  { name: 'Dr. Priya Mehta',  spec: 'Senior Cardiologist',     exp: '15 yrs', rating: 4.9, reviews: 312, init: 'PM', color: 'bg-sky-100 text-sky-700'    },
+  { name: 'Dr. Priya Mehta',  spec: 'Senior Cardiologist',     exp: '15 yrs', rating: 4.9, reviews: 312, init: 'PM', color: 'bg-[--color-keylime-wash] text-[--color-forest-ink]' },
   { name: 'Dr. Rajan Verma',  spec: 'Chief Orthopedic Surgeon',exp: '18 yrs', rating: 4.8, reviews: 245, init: 'RV', color: 'bg-emerald-100 text-emerald-700'},
   { name: 'Dr. Anjali Singh', spec: 'Head of Neurology',       exp: '20 yrs', rating: 4.9, reviews: 410, init: 'AS', color: 'bg-violet-100 text-violet-700' },
   { name: 'Dr. Amit Kumar',   spec: 'Consultant Pediatrician', exp: '12 yrs', rating: 4.7, reviews: 198, init: 'AK', color: 'bg-amber-100 text-amber-700'  },
@@ -69,37 +69,37 @@ export default function Home() {
       ═══════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-900 via-sky-800 to-blue-900" />
+        <div className="absolute inset-0 bg-[--color-forest-ink]" />
         {/* Pattern overlay */}
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
         {/* Blobs */}
-        <div className="absolute top-20 right-10 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[--color-sage-mist]/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-[--color-mint-veil]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/30 rounded-full px-4 py-1.5 text-sky-300 text-xs font-semibold mb-6 backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-[--color-forest-ink]/20 border border-[--color-sage-mist]/30 rounded-full px-4 py-1.5 text-[--color-sage-mist] text-xs font-semibold mb-6 backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-[--color-sage-mist] animate-pulse" />
               NABH Accredited · ISO 9001:2015 Certified
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
               Your Health Is Our{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-teal-300">
+              <span className="text-[--color-sage-mist]">
                 Greatest Priority
               </span>
             </h1>
 
-            <p className="text-sky-100 text-lg leading-relaxed mb-8 max-w-xl">
+            <p className="text-[--color-mint-veil] text-lg leading-relaxed mb-8 max-w-xl">
               MediCare HMS brings world-class healthcare to your fingertips — book appointments, access medical records, and receive expert care from 280+ specialists across 20+ departments.
             </p>
 
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => navigate('/signup')}
-                className="btn bg-white text-sky-700 hover:bg-sky-50 text-base px-7 py-3.5 font-bold shadow-xl shadow-sky-900/30 hover:shadow-2xl hover:shadow-sky-900/40 transition-all">
+                className="btn bg-white text-[--color-forest-ink] hover:bg-[--color-keylime-wash] text-base px-7 py-3.5 font-bold transition-all">
                 Book Appointment <ArrowRight className="w-5 h-5" />
               </button>
               <button
@@ -113,7 +113,7 @@ export default function Home() {
               <div className="flex -space-x-2">
                 {['PM','RV','AS','AK'].map((i, idx) => (
                   <div key={idx}
-                    className="w-9 h-9 rounded-full border-2 border-white bg-sky-600 flex items-center justify-center text-white text-xs font-bold">
+                    className="w-9 h-9 rounded-full border-2 border-white bg-[--color-forest-ink] flex items-center justify-center text-white text-xs font-bold">
                     {i}
                   </div>
                 ))}
@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="flex gap-0.5 mb-0.5">
                   {Array(5).fill(0).map((_, i) => <Star key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />)}
                 </div>
-                <p className="text-sky-200 text-xs"><strong className="text-white">4.9/5</strong> from 12,400+ happy patients</p>
+                <p className="text-[--color-sage-mist] text-xs"><strong className="text-white">4.9/5</strong> from 12,400+ happy patients</p>
               </div>
             </div>
           </div>
@@ -131,11 +131,11 @@ export default function Home() {
           <div className="hidden lg:flex justify-center items-center relative animate-fade-in delay-2">
             <div className="relative w-80 h-80">
               {/* Central circle */}
-              <div className="absolute inset-8 rounded-full bg-sky-500/20 border border-sky-400/30 backdrop-blur-sm flex items-center justify-center">
+              <div className="absolute inset-8 rounded-full bg-[--color-sage-mist]/20 border border-[--color-sage-mist]/30 backdrop-blur-sm flex items-center justify-center">
                 <div className="text-center">
                   <Heart className="w-12 h-12 text-white mx-auto mb-2 animate-pulse-slow" />
                   <p className="text-white font-bold text-lg">MediCare</p>
-                  <p className="text-sky-200 text-xs">HMS</p>
+                  <p className="text-[--color-sage-mist] text-xs">HMS</p>
                 </div>
               </div>
               {/* Orbit cards */}
@@ -146,7 +146,7 @@ export default function Home() {
                 { label: 'Exp Yrs',  value: '25+',     pos: 'top-1/2 -left-4 -translate-y-1/2', color: 'bg-rose-500'  },
               ].map(({ label, value, pos, color }) => (
                 <div key={label}
-                  className={`absolute ${pos} bg-white rounded-xl px-4 py-2.5 shadow-xl text-center min-w-[80px]`}>
+                  className={`absolute ${pos} bg-[--color-cream-paper] rounded-xl px-4 py-2.5 text-center min-w-[80px]`}>
                   <p className={`text-lg font-extrabold ${color.replace('bg-','text-')}`}>{value}</p>
                   <p className="text-slate-500 text-xs">{label}</p>
                 </div>
@@ -157,7 +157,7 @@ export default function Home() {
 
         {/* Wave */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 60" className="w-full fill-sky-50" preserveAspectRatio="none">
+          <svg viewBox="0 0 1440 60" className="w-full fill-[--color-keylime-wash]" preserveAspectRatio="none">
             <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" />
           </svg>
         </div>
@@ -166,7 +166,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           QUICK ACTIONS BAND
       ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-sky-50 py-4">
+      <section className="bg-[--color-keylime-wash] py-4">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { label: 'Book Appointment',  color: 'btn-primary',  path: '/signup',      icon: Clock      },
@@ -190,9 +190,9 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {STATS.map(({ value, label, icon: Icon }, i) => (
               <div key={label}
-                className={`text-center p-6 rounded-2xl border border-sky-100 hover:shadow-lg hover:border-sky-200 transition-all animate-fade-in delay-${i+1}`}>
-                <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-sky-500" />
+                className={`text-center p-6 rounded-2xl border border-[--color-border-mist] hover:border-[--color-sage-mist] transition-all animate-fade-in delay-${i+1}`}>
+                <div className="w-12 h-12 bg-[--color-keylime-wash] rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-6 h-6 text-[--color-forest-ink]" />
                 </div>
                 <p className="text-4xl font-extrabold text-slate-800 mb-1">{value}</p>
                 <p className="text-slate-500 text-sm font-medium">{label}</p>
@@ -208,7 +208,7 @@ export default function Home() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-12">
-            <span className="text-sky-500 font-bold text-xs uppercase tracking-widest">Our Specialties</span>
+            <span className="text-[--color-forest-ink] font-bold text-xs uppercase tracking-widest">Our Specialties</span>
             <h2 className="text-4xl font-extrabold text-slate-800 mt-2 mb-3">World-Class Departments</h2>
             <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
               Equipped with the latest technology and staffed by leading specialists, our departments deliver unmatched clinical excellence.
@@ -222,9 +222,9 @@ export default function Home() {
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${color.split(' ').slice(0,2).join(' ')} border ${color.split(' ')[2]}`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-sky-600 transition-colors">{name}</h3>
+                <h3 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-[--color-forest-ink] transition-colors">{name}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-4">{desc}</p>
-                <div className="flex items-center gap-1 text-sky-500 text-sm font-semibold group-hover:gap-2 transition-all">
+                <div className="flex items-center gap-1 text-[--color-forest-ink] text-sm font-semibold group-hover:gap-2 transition-all">
                   Learn more <ChevronRight className="w-4 h-4" />
                 </div>
               </div>
@@ -245,7 +245,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-12">
-            <span className="text-sky-500 font-bold text-xs uppercase tracking-widest">Our Team</span>
+            <span className="text-[--color-forest-ink] font-bold text-xs uppercase tracking-widest">Our Team</span>
             <h2 className="text-4xl font-extrabold text-slate-800 mt-2 mb-3">Meet Our Expert Doctors</h2>
             <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
               Our doctors are leaders in their fields — combining decades of clinical experience with compassionate patient care.
@@ -256,14 +256,14 @@ export default function Home() {
             {DOCTORS.map(({ name, spec, exp, rating, reviews, init, color }, i) => (
               <div key={name}
                 className={`card overflow-hidden text-center group animate-fade-in delay-${i+1}`}>
-                <div className="bg-gradient-to-br from-sky-50 to-blue-50 h-32 flex items-center justify-center relative">
-                  <div className={`w-20 h-20 rounded-full ${color} flex items-center justify-center text-2xl font-extrabold border-4 border-white shadow-lg group-hover:scale-105 transition-transform`}>
+                <div className="bg-[--color-keylime-wash] h-32 flex items-center justify-center relative">
+                  <div className={`w-20 h-20 rounded-full ${color} flex items-center justify-center text-2xl font-extrabold border-4 border-white group-hover:scale-105 transition-transform`}>
                     {init}
                   </div>
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-slate-800 mb-0.5">{name}</h3>
-                  <p className="text-sky-500 text-xs font-semibold mb-3">{spec}</p>
+                  <p className="text-[--color-forest-ink] text-xs font-semibold mb-3">{spec}</p>
                   <div className="flex items-center justify-center gap-1 mb-2">
                     <StarRating rating={Math.floor(rating)} />
                     <span className="text-xs font-bold text-slate-700">{rating}</span>
@@ -290,14 +290,14 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           WHY CHOOSE US
       ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-20 bg-gradient-to-br from-sky-900 to-blue-900 relative overflow-hidden">
+      <section className="py-20 bg-[--color-forest-ink] relative overflow-hidden">
         <div className="absolute inset-0 opacity-5"
           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '36px 36px' }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
-            <span className="text-sky-300 font-bold text-xs uppercase tracking-widest">Why MediCare?</span>
+            <span className="text-[--color-sage-mist] font-bold text-xs uppercase tracking-widest">Why MediCare?</span>
             <h2 className="text-4xl font-extrabold text-white mt-2 mb-4">Healthcare You Can Trust</h2>
-            <p className="text-sky-200 text-sm leading-relaxed mb-8">
+            <p className="text-[--color-sage-mist] text-sm leading-relaxed mb-8">
               For over 25 years, MediCare has been the region&apos;s most trusted name in healthcare &mdash; delivering advanced treatment with a human touch.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -308,7 +308,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-sm">{title}</p>
-                    <p className="text-sky-300 text-xs leading-relaxed mt-0.5">{desc}</p>
+                    <p className="text-[--color-sage-mist] text-xs leading-relaxed mt-0.5">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -317,7 +317,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 gap-4">
             {[
-              { val: '280+', label: 'Specialist Doctors', color: 'from-sky-500 to-sky-700'     },
+              { val: '280+', label: 'Specialist Doctors', color: 'from-[--color-sage-mist] to-[--color-forest-ink]' },
               { val: '20+',  label: 'Departments',        color: 'from-emerald-500 to-teal-700' },
               { val: '98%',  label: 'Success Rate',       color: 'from-violet-500 to-purple-700'},
               { val: '24/7', label: 'Emergency Care',     color: 'from-rose-500 to-red-700'    },
@@ -338,7 +338,7 @@ export default function Home() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-12">
-            <span className="text-sky-500 font-bold text-xs uppercase tracking-widest">Testimonials</span>
+            <span className="text-[--color-forest-ink] font-bold text-xs uppercase tracking-widest">Testimonials</span>
             <h2 className="text-4xl font-extrabold text-slate-800 mt-2 mb-3">What Our Patients Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -352,7 +352,7 @@ export default function Home() {
                 </div>
                 <p className="text-slate-600 text-sm leading-relaxed mb-5 italic">"{text}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                  <div className="w-10 h-10 rounded-full bg-sky-100 text-sky-700 font-bold text-sm flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[--color-keylime-wash] text-[--color-forest-ink] font-bold text-sm flex items-center justify-center">
                     {name.split(' ').map(w => w[0]).join('')}
                   </div>
                   <div>

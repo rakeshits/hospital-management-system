@@ -20,7 +20,7 @@ const SEED = [
 const COLS = [
   { key:'name',           label:'Doctor',         render:(v,r) => (
     <div className="flex items-center gap-3">
-      <div className="w-8 h-8 rounded-full bg-sky-100 text-sky-700 font-bold text-xs flex items-center justify-center">
+      <div className="w-8 h-8 rounded-full bg-[--color-keylime-wash] text-[--color-forest-ink] font-bold text-xs flex items-center justify-center">
         {v.split(' ').filter((_,i)=>i>0).map(w=>w[0]).join('')}
       </div>
       <div><p className="font-semibold text-slate-800 text-sm">{v}</p><p className="text-xs text-slate-400">{r.email}</p></div>

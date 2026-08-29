@@ -36,7 +36,7 @@ export default function ManageUsers() {
     )},
     { key:'role',   label:'Role', render:(v,r) => (
       <select value={v} onChange={e => changeRole(r.id, e.target.value)}
-        className="text-xs border border-slate-200 rounded-lg px-2 py-1 bg-white text-slate-700 focus:outline-none focus:border-sky-400">
+        className="text-xs border border-[--color-border-mist] rounded-lg px-2 py-1 bg-[--color-cream-paper] text-slate-700 focus:outline-none focus:border-[--color-forest-ink]">
         <option value="admin">Admin</option>
         <option value="doctor">Doctor</option>
         <option value="patient">Patient</option>
@@ -59,7 +59,7 @@ export default function ManageUsers() {
         {['All','admin','doctor','patient'].map(r => (
           <button key={r} onClick={() => setFilter(r)}
             className={`px-4 py-1.5 rounded-full text-sm font-semibold capitalize transition-all
-              ${filter===r ? 'bg-sky-500 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+              ${filter===r ? 'bg-[--color-forest-ink] text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
             {r}
           </button>
         ))}

@@ -36,11 +36,11 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
         ${scrolled || !isOnHero
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100'
+          ? 'bg-[--color-cream-paper]/95 backdrop-blur-md border-b border-[--color-border-mist]'
           : 'bg-transparent'}`}
     >
       {/* Top bar */}
-      <div className="hidden lg:flex items-center justify-between px-8 py-1.5 bg-sky-600 text-white text-xs">
+      <div className="hidden lg:flex items-center justify-between px-8 py-1.5 bg-[--color-forest-ink] text-white text-xs">
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-1.5">
             <Phone className="w-3 h-3" /> Emergency: +91 98765 00000
@@ -48,9 +48,9 @@ export default function Navbar() {
           <span>Open 24 × 7 · All major insurance accepted</span>
         </div>
         <div className="flex items-center gap-4">
-          <Link to="/login"  className="hover:text-sky-200 transition-colors">Staff Login</Link>
+          <Link to="/login"  className="hover:text-[--color-sage-mist] transition-colors">Staff Login</Link>
           <span className="opacity-40">|</span>
-          <Link to="/signup" className="hover:text-sky-200 transition-colors">Patient Register</Link>
+          <Link to="/signup" className="hover:text-[--color-sage-mist] transition-colors">Patient Register</Link>
         </div>
       </div>
 
@@ -58,14 +58,14 @@ export default function Navbar() {
       <nav className="flex items-center justify-between px-6 lg:px-10 h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0">
-          <div className="w-9 h-9 bg-sky-500 rounded-xl flex items-center justify-center shadow-md shadow-sky-200">
+          <div className="w-9 h-9 bg-[--color-forest-ink] rounded-xl flex items-center justify-center">
             <Heart className="w-5 h-5 text-white" />
           </div>
           <div className="leading-none">
             <span className={`font-extrabold text-lg block ${isOnHero && !scrolled ? 'text-white' : 'text-slate-800'}`}>
               MediCare
             </span>
-            <span className={`text-xs ${isOnHero && !scrolled ? 'text-sky-200' : 'text-sky-500'}`}>HMS</span>
+            <span className={`text-xs ${isOnHero && !scrolled ? 'text-[--color-sage-mist]' : 'text-[--color-forest-ink]'}`}>HMS</span>
           </div>
         </Link>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-150
                    ${isActive
-                     ? 'bg-sky-50 text-sky-600'
+                     ? 'bg-[--color-keylime-wash] text-[--color-forest-ink]'
                      : isOnHero && !scrolled
                        ? 'text-white/90 hover:bg-white/10'
                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`
@@ -89,7 +89,7 @@ export default function Navbar() {
         {/* CTA buttons */}
         <div className="hidden lg:flex items-center gap-2">
           <Link to="/login"
-            className={`btn text-sm py-2 px-4 ${isOnHero && !scrolled ? 'btn-outline border-white text-white hover:bg-white hover:text-sky-600' : 'btn-ghost'}`}>
+            className={`btn text-sm py-2 px-4 ${isOnHero && !scrolled ? 'btn-outline border-white text-white hover:bg-white hover:text-[--color-forest-ink]' : 'btn-ghost'}`}>
             Login
           </Link>
           <Link to="/signup" className="btn btn-primary text-sm py-2 px-5">
@@ -109,14 +109,14 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-slate-100 shadow-xl animate-fade-in">
+        <div className="lg:hidden bg-[--color-cream-paper] border-t border-[--color-border-mist] animate-fade-in">
           <ul className="flex flex-col px-4 py-3 gap-0.5">
             {NAV_LINKS.map(({ label, path }) => (
               <li key={path}>
                 <NavLink to={path} end={path === '/'}
                   className={({ isActive }) =>
                     `block px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors
-                     ${isActive ? 'bg-sky-50 text-sky-600' : 'text-slate-700 hover:bg-slate-50'}`
+                     ${isActive ? 'bg-[--color-keylime-wash] text-[--color-forest-ink]' : 'text-slate-700 hover:bg-slate-50'}`
                   }>{label}</NavLink>
               </li>
             ))}

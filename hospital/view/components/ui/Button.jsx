@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * Reusable Button component
- * @param {string}  variant  - 'primary' | 'success' | 'danger' | 'outline' | 'ghost'
+ * @param {string}  variant  - 'primary' | 'secondary' | 'success' | 'danger' | 'outline' | 'ghost'
  * @param {string}  size     - 'sm' | 'md' | 'lg'
  * @param {boolean} loading  - shows spinner when true
  */
@@ -15,9 +15,9 @@ export default function Button({
   ...props
 }) {
   const sizeMap = {
-    sm: 'px-3 py-1.5 text-xs',
-    md: 'px-5 py-2.5 text-sm',
-    lg: 'px-7 py-3 text-base',
+    sm: 'px-4 py-2 text-xs',
+    md: 'px-[21px] py-3.5 text-sm',
+    lg: 'px-7 py-4 text-base',
   };
 
   return (

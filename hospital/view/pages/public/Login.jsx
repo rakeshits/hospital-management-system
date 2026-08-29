@@ -47,14 +47,14 @@ export default function Login() {
               </div>
               <div>
                 <h1 className="text-white text-xl font-bold">MediCare HMS</h1>
-                <p className="text-sky-200 text-xs">Hospital Management System</p>
+                <p className="text-[--color-sage-mist] text-xs">Hospital Management System</p>
               </div>
             </div>
             <div className="animate-float">
               <h2 className="text-white text-4xl font-extrabold leading-tight mb-4">
                 Delivering Care,<br />Powered by Technology
               </h2>
-              <p className="text-sky-100 leading-relaxed max-w-md text-sm">
+              <p className="text-[--color-mint-veil] leading-relaxed max-w-md text-sm">
                 A unified platform for managing patient records, appointments, billing, and clinical workflows — all in one place.
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function Login() {
             ].map((s) => (
               <div key={s.label} className="bg-white/10 backdrop-blur rounded-xl p-3 text-center">
                 <p className="text-white text-xl font-bold">{s.value}</p>
-                <p className="text-sky-200 text-xs mt-0.5">{s.label}</p>
+                <p className="text-[--color-sage-mist] text-xs mt-0.5">{s.label}</p>
               </div>
             ))}
           </div>
@@ -77,7 +77,7 @@ export default function Login() {
         <div className="flex-1 flex items-center justify-center bg-slate-50 p-6">
           <div className="w-full max-w-md animate-fade-in">
             <div className="flex items-center gap-2 mb-8 lg:hidden">
-              <Heart className="w-7 h-7 text-sky-500" />
+              <Heart className="w-7 h-7 text-[--color-forest-ink]" />
               <span className="text-xl font-bold text-slate-800">MediCare HMS</span>
             </div>
 
@@ -89,7 +89,7 @@ export default function Login() {
               {ROLES.map(({ id, label, icon: Icon, desc }) => (
                 <button key={id} type="button" onClick={() => setRole(id)}
                   className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border-2 transition-all text-sm font-semibold
-                    ${role === id ? 'border-sky-400 bg-sky-50 text-sky-700 shadow-md shadow-sky-100' : 'border-slate-200 bg-white text-slate-500 hover:border-sky-200'}`}>
+                    ${role === id ? 'border-[--color-forest-ink] bg-[--color-keylime-wash] text-[--color-forest-ink]' : 'border-slate-200 bg-[--color-cream-paper] text-slate-500 hover:border-[--color-sage-mist]'}`}>
                   <Icon className="w-5 h-5" />
                   <span className="text-xs">{label}</span>
                 </button>
@@ -130,7 +130,7 @@ export default function Login() {
                   <input type="checkbox" className="rounded border-slate-300" />
                   Remember me
                 </label>
-                <a href="#" className="text-sky-500 hover:text-sky-700 font-medium transition-colors">Forgot password?</a>
+                <a href="#" className="text-[--color-forest-ink] hover:text-[--color-forest-shadow] font-medium transition-colors">Forgot password?</a>
               </div>
 
               <button type="submit" disabled={loading}
@@ -149,7 +149,7 @@ export default function Login() {
 
             <p className="text-center text-sm text-slate-500 mt-6">
               New patient?{' '}
-              <Link to="/signup" className="text-sky-500 hover:text-sky-700 font-semibold transition-colors">Register here</Link>
+              <Link to="/signup" className="text-[--color-forest-ink] hover:text-[--color-forest-shadow] font-semibold transition-colors">Register here</Link>
             </p>
             <p className="text-center text-xs text-slate-400 mt-4">
               Protected by enterprise-grade security · HIPAA compliant

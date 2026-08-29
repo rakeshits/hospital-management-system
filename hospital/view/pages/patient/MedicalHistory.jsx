@@ -1,1 +1,3 @@
-export default function MedicalHistory() { return <div className="p-8">MedicalHistory — coming soon</div>; }
+import AppLayout from '../../components/layout/AppLayout.jsx';
+
+export default function MedicalHistory() { return <AppLayout title="Medical History"><div>MedicalHistory — coming soon</div></AppLayout>; }

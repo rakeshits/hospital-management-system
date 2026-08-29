@@ -7,12 +7,12 @@ const DEPARTMENTS = [
   { name: 'Cardiology',    icon: Heart,      color: 'bg-red-50 text-red-500 border-red-200',     desc: 'Expert care for all heart and vascular conditions. Advanced interventional cardiology and cardiac surgery.', doctors: 18, beds: 40 },
   { name: 'Neurology',     icon: Brain,      color: 'bg-purple-50 text-purple-500 border-purple-200', desc: 'Comprehensive brain, spine & nervous system treatment with neuro-ICU and stroke rapid response unit.', doctors: 14, beds: 30 },
   { name: 'Orthopedics',   icon: Bone,       color: 'bg-amber-50 text-amber-500 border-amber-200',  desc: 'Bone, joint & musculoskeletal specialists. Joint replacement, sports injuries, and spine surgery.', doctors: 16, beds: 35 },
-  { name: 'Pediatrics',    icon: Baby,       color: 'bg-sky-50 text-sky-500 border-sky-200',       desc: 'Dedicated child healthcare from neonatology to adolescent medicine. PICU and pediatric emergency.', doctors: 12, beds: 25 },
+  { name: 'Pediatrics',    icon: Baby,       color: 'bg-[--color-keylime-wash] text-[--color-forest-ink] border-[--color-border-mist]', desc: 'Dedicated child healthcare from neonatology to adolescent medicine. PICU and pediatric emergency.', doctors: 12, beds: 25 },
   { name: 'Diagnostics',   icon: Microscope, color: 'bg-teal-50 text-teal-500 border-teal-200',    desc: 'NABL-certified labs, 3T MRI, CT scan, PET scan, digital X-ray and advanced pathology.', doctors: 10, beds: 0  },
   { name: 'Emergency',     icon: Activity,   color: 'bg-rose-50 text-rose-500 border-rose-200',    desc: '24×7 Level-1 trauma centre with rapid assessment, resuscitation bays and ambulance network.', doctors: 20, beds: 20 },
   { name: 'Gynecology',    icon: Heart,      color: 'bg-pink-50 text-pink-500 border-pink-200',    desc: "Complete women's health services: obstetrics, IVF, minimally invasive surgery, oncology.", doctors: 10, beds: 22 },
   { name: 'Dermatology',   icon: Activity,   color: 'bg-orange-50 text-orange-500 border-orange-200', desc: 'Medical and cosmetic dermatology, hair & skin treatments, laser therapy and allergy testing.', doctors: 8,  beds: 10 },
-  { name: 'Oncology',      icon: Microscope, color: 'bg-indigo-50 text-indigo-500 border-indigo-200', desc: 'Comprehensive cancer care: chemotherapy, radiation, immunotherapy and precision medicine.', doctors: 12, beds: 30 },
+  { name: 'Oncology',      icon: Microscope, color: 'bg-[--color-keylime-wash] text-[--color-forest-ink] border-[--color-border-mist]', desc: 'Comprehensive cancer care: chemotherapy, radiation, immunotherapy and precision medicine.', doctors: 12, beds: 30 },
 ];
 
 export default function DepartmentsPreview() {
@@ -23,18 +23,18 @@ export default function DepartmentsPreview() {
     <PublicLayout>
       {/* Hero */}
       <section className="relative pt-36 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-900 via-sky-800 to-blue-900" />
+        <div className="absolute inset-0 bg-[--color-forest-ink]" />
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '36px 36px' }} />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <span className="inline-block bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-bold px-4 py-1.5 rounded-full mb-5">
+          <span className="inline-block bg-[--color-forest-ink]/20 border border-[--color-sage-mist]/30 text-[--color-sage-mist] text-xs font-bold px-4 py-1.5 rounded-full mb-5">
             20+ Specialties
           </span>
           <h1 className="text-5xl font-extrabold text-white mb-4 leading-tight">
             Our Medical{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-teal-300">Departments</span>
+            <span className="text-[--color-sage-mist]">Departments</span>
           </h1>
-          <p className="text-sky-100 text-base leading-relaxed mb-8">
+          <p className="text-[--color-mint-veil] text-base leading-relaxed mb-8">
             World-class care across all major medical specialties, staffed by leading consultants and equipped with the latest technology.
           </p>
           {/* Search */}
@@ -43,7 +43,7 @@ export default function DepartmentsPreview() {
             <input
               value={query} onChange={e => setQuery(e.target.value)}
               placeholder="Search departments…"
-              className="input-field pl-12 py-3.5 text-sm rounded-xl shadow-lg shadow-sky-900/20"
+              className="input-field pl-12 py-3.5 text-sm rounded-xl"
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function DepartmentsPreview() {
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 border ${color}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-sky-600 transition-colors">{name}</h3>
+                  <h3 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-[--color-forest-ink] transition-colors">{name}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed mb-4">{desc}</p>
                   <div className="flex gap-4 text-xs text-slate-400 mb-4">
                     {doctors > 0 && <span className="flex items-center gap-1">👨‍⚕️ {doctors} Doctors</span>}
@@ -78,7 +78,7 @@ export default function DepartmentsPreview() {
                     <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 24×7</span>
                   </div>
                   <Link to="/signup"
-                    className="inline-flex items-center gap-1 text-sky-500 font-semibold text-sm hover:gap-2 transition-all">
+                    className="inline-flex items-center gap-1 text-[--color-forest-ink] font-semibold text-sm hover:gap-2 transition-all">
                     Book Appointment <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

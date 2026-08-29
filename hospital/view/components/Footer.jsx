@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Heart, Phone, Mail, MapPin } from 'lucide-react';
 
 const QUICK_LINKS = [
   { label: 'Home',        path: '/'            },
@@ -24,21 +24,21 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2.5 mb-4">
-            <div className="w-9 h-9 bg-sky-500 rounded-xl flex items-center justify-center">
+            <div className="w-9 h-9 bg-[--color-forest-ink] rounded-xl flex items-center justify-center">
               <Heart className="w-5 h-5 text-white" />
             </div>
             <div>
               <p className="text-white font-extrabold text-lg leading-none">MediCare HMS</p>
-              <p className="text-sky-400 text-xs">Your Health, Our Priority</p>
+              <p className="text-[--color-sage-mist] text-xs">Your Health, Our Priority</p>
             </div>
           </div>
           <p className="text-sm leading-relaxed mb-5">
             A state-of-the-art hospital management system providing seamless care across all departments. NABH accredited.
           </p>
           <div className="flex gap-3">
-            {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-              <a key={i} href="#" className="w-8 h-8 bg-slate-800 hover:bg-sky-500 rounded-lg flex items-center justify-center transition-colors">
-                <Icon className="w-4 h-4" />
+            {['f', 'x', 'in', 'ig'].map((label) => (
+              <a key={label} href="#" className="w-8 h-8 bg-slate-800 hover:bg-[--color-forest-ink] rounded-lg flex items-center justify-center transition-colors">
+                <span className="text-xs font-bold" aria-label={label}>{label}</span>
               </a>
             ))}
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-2">
             {QUICK_LINKS.map(({ label, path }) => (
               <li key={path}>
-                <Link to={path} className="text-sm hover:text-sky-400 transition-colors">{label}</Link>
+                <Link to={path} className="text-sm hover:text-[--color-sage-mist] transition-colors">{label}</Link>
               </li>
             ))}
           </ul>
@@ -62,7 +62,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-2">
             {DEPARTMENTS.map(d => (
               <li key={d}>
-                <Link to="/departments" className="text-sm hover:text-sky-400 transition-colors">{d}</Link>
+                <Link to="/departments" className="text-sm hover:text-[--color-sage-mist] transition-colors">{d}</Link>
               </li>
             ))}
           </ul>
@@ -73,15 +73,15 @@ export default function Footer() {
           <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h3>
           <div className="flex flex-col gap-3 text-sm">
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[--color-sage-mist] shrink-0 mt-0.5" />
               <span>42, Health City Road, Bengaluru, Karnataka — 560001</span>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-sky-400 shrink-0" />
+              <Phone className="w-4 h-4 text-[--color-sage-mist] shrink-0" />
               <span>+91 98765 00000 (24×7)</span>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+              <Mail className="w-4 h-4 text-[--color-sage-mist] shrink-0" />
               <span>info@medicare-hms.com</span>
             </div>
           </div>

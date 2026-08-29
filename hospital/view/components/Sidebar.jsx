@@ -37,7 +37,7 @@ const MENUS = {
 };
 
 const ROLE_LABELS = { admin: 'Administrator', doctor: 'Doctor Portal', patient: 'Patient Portal' };
-const ROLE_COLORS = { admin: 'from-sky-900 via-sky-800 to-blue-900', doctor: 'from-emerald-900 via-teal-800 to-emerald-900', patient: 'from-violet-900 via-purple-800 to-violet-900' };
+const ROLE_COLORS = { admin: 'from-[--color-forest-ink] via-[--color-forest-ink] to-[--color-forest-shadow]', doctor: 'from-emerald-900 via-teal-800 to-emerald-900', patient: 'from-violet-900 via-purple-800 to-violet-900' };
 
 export default function Sidebar({ open, onClose }) {
   const { user, logout } = useAuth();
@@ -104,7 +104,7 @@ export default function Sidebar({ open, onClose }) {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all group
                      ${isActive
-                       ? 'bg-white/20 text-white shadow-sm'
+                       ? 'bg-white/20 text-white'
                        : 'text-white/70 hover:bg-white/10 hover:text-white'}`
                   }
                 >

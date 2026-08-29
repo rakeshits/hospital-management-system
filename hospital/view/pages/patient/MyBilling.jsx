@@ -1,1 +1,3 @@
-export default function MyBilling() { return <div className="p-8">MyBilling — coming soon</div>; }
+import AppLayout from '../../components/layout/AppLayout.jsx';
+
+export default function MyBilling() { return <AppLayout title="My Billing"><div>MyBilling — coming soon</div></AppLayout>; }

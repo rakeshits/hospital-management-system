@@ -58,7 +58,7 @@ export default function ManagePatients() {
         {['All','Active','Admitted','Discharged'].map(s => (
           <button key={s} onClick={() => setFilter(s)}
             className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-all
-              ${filter===s ? 'bg-sky-500 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+              ${filter===s ? 'bg-[--color-forest-ink] text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
             {s}
           </button>
         ))}

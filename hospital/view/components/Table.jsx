@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Table({ columns, data, actions, emptyMessage = 'No records found.' }) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-slate-100">
+    <div className="overflow-x-auto">
       <table className="hms-table">
         <thead>
           <tr>

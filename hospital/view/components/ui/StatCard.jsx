@@ -5,21 +5,21 @@ import React from 'react';
  */
 export default function StatCard({ title, value, icon: Icon, color = 'blue', trend, className = '' }) {
   const colorMap = {
-    blue:   { border: 'border-l-sky-500',   bg: 'bg-sky-50',    text: 'text-sky-600'   },
-    green:  { border: 'border-l-emerald-500', bg: 'bg-emerald-50', text: 'text-emerald-600' },
-    yellow: { border: 'border-l-amber-500',  bg: 'bg-amber-50',  text: 'text-amber-600'  },
-    purple: { border: 'border-l-violet-500', bg: 'bg-violet-50', text: 'text-violet-600' },
-    red:    { border: 'border-l-red-500',    bg: 'bg-red-50',    text: 'text-red-600'    },
+    blue:   { bg: 'bg-keylime-wash', text: 'text-forest-ink' },
+    green:  { bg: 'bg-sage-mist', text: 'text-forest-ink' },
+    yellow: { bg: 'bg-cream-paper', text: 'text-forest-ink' },
+    purple: { bg: 'bg-mint-veil', text: 'text-forest-ink' },
+    red:    { bg: 'bg-cream-paper', text: 'text-forest-ink' },
   };
 
   const c = colorMap[color] || colorMap.blue;
 
   return (
-    <div className={`card p-6 border-l-4 ${c.border} ${className}`}>
+    <div className={`card ${c.bg} ${className}`}>
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">{title}</p>
-          <h3 className="text-3xl font-bold text-slate-800 leading-tight">{value}</h3>
+          <p className="text-xs font-semibold text-charcoal uppercase tracking-wider mb-1">{title}</p>
+          <h3 className="font-display text-4xl font-light text-forest-ink leading-tight">{value}</h3>
           {trend && (
             <p className={`text-xs mt-1 font-medium ${trend.up ? 'text-emerald-600' : 'text-red-500'}`}>
               {trend.up ? '▲' : '▼'} {trend.value} vs last month

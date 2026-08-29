@@ -21,11 +21,10 @@
 
 /* ── Card hover lift (extra specificity for public pages) ── */
 .card-lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
 }
 .card-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(14,165,233,0.15);
 }
 
 /* ── Timeline dot pulse ── */
@@ -37,7 +36,7 @@
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 2px solid #38bdf8;
+  border: 2px solid var(--color-sage-mist);
   opacity: 0;
   animation: ping 2s ease-out infinite;
 }
